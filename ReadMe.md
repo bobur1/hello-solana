@@ -36,3 +36,11 @@ To test the program functionality, use the following commands:
 anchor test
 ```
 
+run docker:
+`docker buildx build --platform linux/amd64 -t testing:v0 --load .`
+
+`docker run --platform linux/amd64 -d -p 8080:8080 testing:v0`
+
+solana-verify get-executable-hash target/verifiable/hello_solana.so
+
+solana-verify get-executable-hash target/deploy/hello_solana.so
