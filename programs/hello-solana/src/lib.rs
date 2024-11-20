@@ -1,6 +1,17 @@
 use anchor_lang::prelude::*;
+use solana_security_txt::security_txt;
 
-declare_id!("8FLVYw42CfMjcbYuvB6tKz2Ms4Pe6QXoaReqZEoY1NkQ");
+declare_id!("DQ8H7EGgWpxqv6rV9rj2DVWyyRZvGwj8PvRYjyfQG8Qo");
+
+#[cfg(not(feature = "no-entrypoint"))]
+security_txt! {
+    name: "Hello Solana Program",
+    project_url: "https://github.com/bobur1/hello-solana",
+    contacts: "email:derbibme@gmail.com",
+    policy: "https://github.com/bobur1/hello-solana/blob/main/SECURITY.md",
+    preferred_languages: "en",
+    source_code: "https://github.com/bobur1/hello-solana"
+}
 
 #[program]
 pub mod hello_solana {
