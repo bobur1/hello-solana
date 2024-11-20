@@ -44,3 +44,7 @@ run docker:
 solana-verify get-executable-hash target/verifiable/hello_solana.so
 
 solana-verify get-executable-hash target/deploy/hello_solana.so
+
+solana-verify get-program-hash DQ8H7EGgWpxqv6rV9rj2DVWyyRZvGwj8PvRYjyfQG8Qo
+
+solana program deploy ./target/verifiable/hello_solana.so --program-id DQ8H7EGgWpxqv6rV9rj2DVWyyRZvGwj8PvRYjyfQG8Qo --keypair ./key/key.json
